@@ -5,6 +5,10 @@
 #include "pio.h"
 #include "pio_internal.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* GPTL timers assume this as the maximum name size */
 #define SPIO_TIMER_MAX_NAME 63
 /* The struct below is used to cache I/O statistics
@@ -30,4 +34,9 @@ int spio_write_io_summary(iosystem_desc_t *ios);
  * The function is called when a file is closed
  */
 int spio_write_file_io_summary(file_desc_t *file);
+
+#ifdef __cplusplus
+}
+#endif
+  
 #endif /* __SPIO_IO_SUMMARY_H__ */

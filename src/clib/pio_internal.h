@@ -33,6 +33,9 @@
 #include "spio_ltimer.h"
 
 #if PIO_ENABLE_LOGGING
+# ifdef __cplusplus
+extern "C"
+# endif
 void pio_log(int severity, const char *fmt, ...);
 #define LOG(e) pio_log e
 #else

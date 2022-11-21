@@ -6,6 +6,10 @@
 #ifndef _BGET_H_
 #define _BGET_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* in PIO we use DEBUG bget uses NDEBUG */
 //#ifndef DEBUG
 //#undef NDEBUG
@@ -28,5 +32,9 @@ void    bufdump(void *buf);
 void    bpoold(void *pool, int dumpalloc, int dumpfree);
 int     bpoolv(void *pool);
 void bfreespace(bufsize *maxfree, bufsize *totfree);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
